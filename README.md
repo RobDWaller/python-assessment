@@ -6,6 +6,14 @@ There are four tasks to complete based around a list of dictionaries which repre
 
 The data can be found in the `/websites/resouces/data.py` file.
 
+The data can be viewed by running the following commands on the command line in Python's interactive mode:
+
+```bash
+from websites.resources.data import WEBSITES
+
+print(WEBSITES)
+```
+
 The data structure is as follows, with five keys for each item:
 
 ```python
@@ -36,6 +44,8 @@ git@github.com:RobDWaller/python-assessment.git
 ```
 
 Write your code to complete the tasks and then store your code in a public git repository on GitHub or equivalent service. Alternatively zip the code up and submit via email.
+
+You should not spend more than one hour completing this assessment. You will not be judged based on how many questions you answer but how well you answer each question.
 
 ## Tasks
 
@@ -116,5 +126,4 @@ Add up all the value keys in the list and return an integer.
 
 ## Author
 
-Rob Waller
 [RobDWaller](https://twitter.com/RobDWaller)
