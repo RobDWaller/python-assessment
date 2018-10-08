@@ -1,12 +1,12 @@
 # Python Developer Assessment
 
-The aim of this Python assessment is to see how experienced a Python developer is. The test is not a binary pass / fail test. It assess where someone is on the Junior, Mid, Senior scale. It should be seen as a validation process and there are no right or wrong answers to solve the tasks defined.
+The aim of this Python assessment is to see how experienced a developer is, it is not a binary pass / fail test. It assess where a developer is on the Junior, Mid, Senior scale. It should be seen as a validation process and there are no right or wrong ways to solve the tasks defined.
 
-There are four tasks to complete based around a list of dictionaries which represent pseudo data for website URLs. Each task aims to test a developer's ability to manipulate and edit a list of data.
+There are four tasks to complete based around a list of dictionaries which represent pseudo-data for website URLs. Each task aims to test a developer's ability to manipulate and edit a list of data.
 
 The data can be found in the `/websites/resouces/data.py` file.
 
-The data structure is as follows:
+The data structure is as follows, with five keys for each item:
 
 ```python
 [
@@ -26,6 +26,16 @@ The data structure is as follows:
     }
 ]
 ```
+
+## Assessment Instructions
+
+To complete the assessment please clone the repository.
+
+```
+git@github.com:RobDWaller/python-assessment.git
+```
+
+Write your code to complete the tasks and then store your code in a public git repository on GitHub or equivalent service. Alternatively zip the code up and submit via email.
 
 ## Tasks
 
@@ -63,7 +73,7 @@ Amend the list so each domain key value is prepended with the string `www.`
 
 ### Task Three: Cleanse Data
 
-Some of the data is inaccurate, the secure key is set to False when the url key contains a url beginning with `http://`. The opposite is also true in some cases.
+Some of the data is inaccurate, the secure key is set to False when the url key contains a url beginning with `https://`. The opposite is also true in some cases.
 
 The list should be cleansed and returned so the secure keys are accurate.
 
@@ -103,3 +113,8 @@ Add up all the value keys in the list and return an integer.
     }
 ]
 ```
+
+## Author
+
+Rob Waller
+[RobDWaller](https://twitter.com/RobDWaller)
