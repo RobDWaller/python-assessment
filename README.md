@@ -23,14 +23,14 @@ The data structure is as follows, with five keys for each item:
         "url": "https://www.google.co.uk",
         "domain": "google.co.uk",
         "secure": True,
-        "value": 5,
+        "value": 5
     },
     {
         "name": "Facebook",
         "url": "https://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/",
         "domain": "facebook.com",
         "secure": True,
-        "value": 4,
+        "value": 4
     }
 ]
 ```
@@ -61,7 +61,7 @@ Find and return a new list of data where each item's value key is equal to or gr
     "url": "https://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/",
     "domain": "facebook.com",
     "secure": True,
-    "value": 4,
+    "value": 4
 }
 ```
 
@@ -77,7 +77,7 @@ Amend the list so each domain key value is prepended with the string `www.`
     "url": "https://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/",
     "domain": "www.facebook.com",
     "secure": True,
-    "value": 4,
+    "value": 4
 }
 ```
 
@@ -95,7 +95,7 @@ The list should be cleansed and returned so the secure keys are accurate.
     "url": "https://www.bing.com/search?q=athlete&qs=n&form=QBLH&sp=-1&pq=athlete&sc=8-7&sk=&cvid=53830DD7FB2E47B7A5D9CF27F106BC9A",
     "domain": "bing.com",
     "secure": True,
-    "value": 3,
+    "value": 3
 }
 ```
 
@@ -112,14 +112,14 @@ Add up all the value keys in the list and return an integer.
         "url": "https://www.google.co.uk",
         "domain": "google.co.uk",
         "secure": True,
-        "value": 5,
+        "value": 5
     },
     {
         "name": "Facebook",
         "url": "https://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/",
         "domain": "facebook.com",
         "secure": True,
-        "value": 4,
+        "value": 4
     }
 ]
 ```
