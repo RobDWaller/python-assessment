@@ -69,7 +69,7 @@ Find and return a new list of data where each item's value key is equal to or gr
 
 Amend the list so each domain key value is prepended with the string `www.`
 
-**Example:** An amended dictionary should look like this.
+**Example:** An amended dictionary should look like this, facebook.com has become www.facebook.com.
 
 ```python
 {
@@ -83,11 +83,11 @@ Amend the list so each domain key value is prepended with the string `www.`
 
 ### Task Three: Cleanse Data
 
-Some of the data is inaccurate, the secure key is set to False when the url key contains a url beginning with `https://`. The opposite is also true in some cases.
+Some of the data is inaccurate, the secure key is set to False when the url key contains a URL beginning with `https://`. The opposite is also true in some cases.
 
 The list should be cleansed and returned so the secure keys are accurate.
 
-**Example:** The below dictionary should be amended to look as follows. It's current state is secure equals false even though the url key contains `https://`.
+**Example:** The below dictionary should be amended to look as follows. It's current state is secure equals False even though the url key contains `https://`.
 
 ```python
 {
@@ -103,7 +103,7 @@ The list should be cleansed and returned so the secure keys are accurate.
 
 Add up all the value keys in the list and return an integer.
 
-**Example:** If we added up the below value keys we'd get an integer of 9.
+**Example:** If we added up the below value keys we'd get an integer of 9, 5 + 4.
 
 ```python
 [

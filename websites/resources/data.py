@@ -1,5 +1,5 @@
 '''
-A list of dicts containing data on website urls.
+A list of dictionaries containing data on website urls.
 '''
 
 WEBSITES = [
