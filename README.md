@@ -69,7 +69,7 @@ Find and return a new list of data where each item's value key is equal to or gr
 
 Amend the list so each domain key value is prepended with the string `www.`
 
-**Example:** An amended dictionary should look like this, facebook.com has become www.facebook.com.
+**Example:** An amended dictionary should look as below where facebook.com has become www.facebook.com.
 
 ```python
 {
@@ -127,3 +127,5 @@ Add up all the value keys in the list and return an integer.
 ## Author
 
 [RobDWaller](https://twitter.com/RobDWaller)
+
+If you have any questions feel free to message me on Twitter.
