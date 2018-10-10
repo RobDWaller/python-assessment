@@ -9,9 +9,9 @@ The data can be found in the `/websites/resouces/data.py` file.
 The data can be viewed by running the following commands on the command line in Python's interactive mode:
 
 ```bash
-from websites.resources.data import WEBSITES
-
-print(WEBSITES)
+python
+>>> from websites.resources.data import WEBSITES
+>>> print(WEBSITES)
 ```
 
 The data structure is as follows, with five keys for each item:
