@@ -47,6 +47,10 @@ Write your code to complete the tasks and then store your code in a public git r
 
 You should not spend more than one hour completing this assessment. You will not be judged based on how many questions you answer but how well you answer each question.
 
+### Note to Managers and Recruiters
+
+This assessment should be used as part of an interview process. Developers who complete it deserve feedback on how they have performed and how they might improve. It should not be used as a filtering tool. 
+
 ## Tasks
 
 ### Task One: Find Data
@@ -126,6 +130,6 @@ Add up all the value keys in the list and return an integer.
 
 ## Author
 
-[RobDWaller](https://twitter.com/RobDWaller)
+[@RobDWaller](https://twitter.com/RobDWaller)
 
 If you have any questions feel free to message me on Twitter.
