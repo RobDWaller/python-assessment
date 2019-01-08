@@ -1,8 +1,9 @@
 import pytest
 
 from data_extractor import DataExtractor
+from websites.resources.data import WEBSITES
 
-data_extractor = DataExtractor()
+data_extractor = DataExtractor(WEBSITES)
 
 
 class TestDataExtractor:

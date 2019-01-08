@@ -5,8 +5,8 @@ class DataExtractor:
     """
     Use to extract, cleanse and amend incorrect website data collection.
     """
-    def __init__(self):
-        self.data = WEBSITES
+    def __init__(self, data):
+        self.data = data
 
     def find_items(self, value=4):
         """
@@ -29,7 +29,7 @@ class DataExtractor:
         return amended
 
 
-data_extractor = DataExtractor()
+data_extractor = DataExtractor(WEBSITES)
 # print(data_extractor.amend_domain_values())
 print(data_extractor.find_items(4))
 print(len(data_extractor.find_items(4)))
