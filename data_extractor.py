@@ -28,8 +28,29 @@ class DataExtractor:
             amended.append(item)
         return amended
 
+    def cleanse_data(self):
+        """
+        Fix errors in "secure" key values. All urls starting with https should be set to "secure": True, those starting
+        with http "secure": False.
+        :return: amended: list(dict), amended list of web records.
+        """
+        amended = []
+        for item in self.data:
+            url = item.get('url')
+            secure = item.get('secure')
+            # https marked as secure = False
+            if url and url.startswith('https:') and not item.get('secure'):
+                item['secure'] = True
+            # http marked as secure = True
+            elif url and url.startswith('http:') and item.get('secure'):
+                item['secure'] = False
+            amended.append(item)
+        return amended
 
-data_extractor = DataExtractor(WEBSITES)
+
+
+# data_extractor = DataExtractor(WEBSITES)
 # print(data_extractor.amend_domain_values())
-print(data_extractor.find_items(4))
-print(len(data_extractor.find_items(4)))
+# print(data_extractor.find_items(4))
+# print(len(data_extractor.find_items(4)))
+# print(data_extractor.cleanse_data())

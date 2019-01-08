@@ -107,3 +107,68 @@ class TestDataExtractor:
         ]
         _data_extractor = DataExtractor(test_data)
         assert _data_extractor.amend_domain_values() == test_data
+
+    def test_cleanse_data(self):
+        test_data = [
+            {
+                'name': 'Google',
+                'url': 'https://www.google.co.uk',
+                'domain': 'google.co.uk',
+                'secure': False,
+                'value': 5
+            },
+            {
+                'name': 'Facebook',
+                'url': 'http://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/',
+                'domain': 'facebook.com',
+                'secure': True,
+                'value': 4
+            },
+            {
+                'name': 'Bing',
+                'url': 'http://www.bing.com/search?q=athlete&qs=n&form=QBLH&sp=-1&pq=athlete&sc=8-7&sk=&cvid=53830DD7FB2E47B7A5D9CF27F106BC9A',
+                'domain': 'bing.com',
+                'secure': False,
+                'value': 3
+            },
+            {
+                'name': 'Duck Duck Go',
+                'url': 'https://duckduckgo.com/?q=plane&t=h_&ia=web',
+                'domain': 'duckduckgo.com',
+                'secure': True,
+                'value': 2
+            },
+        ]
+
+        expected = [
+            {
+                'name': 'Google',
+                'url': 'https://www.google.co.uk',
+                'domain': 'google.co.uk',
+                'secure': True,
+                'value': 5
+            },
+            {
+                'name': 'Facebook',
+                'url': 'http://developers.facebook.com/blog/post/2018/10/02/facebook-login-update/',
+                'domain': 'facebook.com',
+                'secure': False,
+                'value': 4
+            },
+            {
+                'name': 'Bing',
+                'url': 'http://www.bing.com/search?q=athlete&qs=n&form=QBLH&sp=-1&pq=athlete&sc=8-7&sk=&cvid=53830DD7FB2E47B7A5D9CF27F106BC9A',
+                'domain': 'bing.com',
+                'secure': False,
+                'value': 3
+            },
+            {
+                'name': 'Duck Duck Go',
+                'url': 'https://duckduckgo.com/?q=plane&t=h_&ia=web',
+                'domain': 'duckduckgo.com',
+                'secure': True,
+                'value': 2
+            },
+        ]
+        _data_extractor = DataExtractor(test_data)
+        assert _data_extractor.cleanse_data() == expected
