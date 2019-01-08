@@ -32,6 +32,12 @@ class TestDataExtractor:
         ]
         assert data_extractor.find_items() == expected
 
+    def test_find_items_none_found(self):
+        assert data_extractor.find_items(100) == []
+
+    def test_find_items_all_matching(self):
+        assert data_extractor.find_items(1) == WEBSITES
+
     def test_amend_domain_values(self):
         expected = [
             {
