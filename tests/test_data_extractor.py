@@ -94,3 +94,16 @@ class TestDataExtractor:
             }
         ]
         assert data_extractor.amend_domain_values() == expected
+
+    def test_amend_domain_values_retains_original_if_prefix_matching(self):
+        test_data = [
+            {
+                'name': 'Google',
+                'url': 'https://www.google.co.uk',
+                'domain': 'www.google.co.uk',
+                'secure': True,
+                'value': 5
+            }
+        ]
+        _data_extractor = DataExtractor(test_data)
+        assert _data_extractor.amend_domain_values() == test_data
