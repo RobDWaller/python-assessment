@@ -8,15 +8,15 @@ class DataExtractor:
     def find_items(self, value=4):
         """
         Find and return a new list of items where key "value" is greater than or equal to parameter value.
-        :param value: int, value to find items for, default = 4.
+        :param value: int, value to find items for.
         :return: list(dict), list of dictionaries matching the above filtering rule.
         """
         return [item for item in self.data if item.get('value') and item.get('value') >= value]
 
     def amend_domain_values(self, prefix='www.'):
         """
-        Fixes missing parts of the domain names.
-        :param prefix: str, prefix to add to the domain name, default = 'www'.
+        Fixes missing parts of the domain names. By default we add missing 'www.'.
+        :param prefix: str, prefix to add to the domain name.
         :return: amended: list(dict), amended list of web records.
         """
         amended = []

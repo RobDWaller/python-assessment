@@ -1,7 +1,3 @@
-# Tests are written for pytest framework.
-# use: pip install pytest
-# to test: pytest
-
 from data_extractor import DataExtractor
 from websites.resources.data import WEBSITES
 
