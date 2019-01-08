@@ -1,16 +1,14 @@
-from websites.resources.data import WEBSITES
-
-
 class DataExtractor:
     """
-    Use to extract, cleanse and amend incorrect website data collection.
+    Use to extract, cleanse, sum and amend incorrect website data collection.
     """
     def __init__(self, data):
         self.data = data
 
     def find_items(self, value=4):
         """
-        Find and return a new list of items where key "value" is greater than or equal to parameter value. Default = 4.
+        Find and return a new list of items where key "value" is greater than or equal to parameter value.
+        :param value: int, value to find items for, default = 4.
         :return: list(dict), list of dictionaries matching the above filtering rule.
         """
         return [item for item in self.data if item.get('value') and item.get('value') >= value]
@@ -18,7 +16,7 @@ class DataExtractor:
     def amend_domain_values(self, prefix='www.'):
         """
         Fixes missing parts of the domain names.
-        :param prefix: str, prefix to add to the domain name. Default = 'www'.
+        :param prefix: str, prefix to add to the domain name, default = 'www'.
         :return: amended: list(dict), amended list of web records.
         """
         amended = []
@@ -38,19 +36,19 @@ class DataExtractor:
         for item in self.data:
             url = item.get('url')
             secure = item.get('secure')
-            # https marked as secure = False
-            if url and url.startswith('https:') and not item.get('secure'):
-                item['secure'] = True
-            # http marked as secure = True
-            elif url and url.startswith('http:') and item.get('secure'):
-                item['secure'] = False
+            if url:
+                # https marked as secure = False
+                if url.startswith('https:') and not secure:
+                    item['secure'] = True
+                # http marked as secure = True
+                elif url.startswith('http:') and secure:
+                    item['secure'] = False
             amended.append(item)
         return amended
 
-
-
-# data_extractor = DataExtractor(WEBSITES)
-# print(data_extractor.amend_domain_values())
-# print(data_extractor.find_items(4))
-# print(len(data_extractor.find_items(4)))
-# print(data_extractor.cleanse_data())
+    def get_value_sum(self):
+        """
+        Returns sum of all value keys in the data set.
+        :return: int, sum of all value keys in the data set.
+        """
+        return sum([item.get('value', 0) for item in self.data])

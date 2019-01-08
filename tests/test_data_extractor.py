@@ -1,4 +1,6 @@
-import pytest
+# Tests are written for pytest framework.
+# use: pip install pytest
+# to test: pytest
 
 from data_extractor import DataExtractor
 from websites.resources.data import WEBSITES
@@ -172,3 +174,10 @@ class TestDataExtractor:
         ]
         _data_extractor = DataExtractor(test_data)
         assert _data_extractor.cleanse_data() == expected
+
+    def test_get_value_sum(self):
+        assert data_extractor.get_value_sum() == 23
+
+    def test_get_value_sum_empty_data_set(self):
+        _data_extractor = DataExtractor([])
+        assert _data_extractor.get_value_sum() == 0
