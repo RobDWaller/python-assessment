@@ -34,6 +34,10 @@ The data structure is as follows, with five keys for each item:
     }
 ]
 ```
+## Running the Program (Vincent's Assessment)
+
+To run the code I wrote for this assessment, run `python3 main.py <task number>` where task number can be 1, 2, 3, or 4.
+
 
 ## Assessment Instructions
 
