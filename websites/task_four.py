@@ -1,12 +1,10 @@
-from .resources.data import WEBSITES
-
 '''
 Prints the total value of all sites
 '''
-def task_four():
+def task_four(websites):
     total = 0
 
-    for website in WEBSITES:
+    for website in websites:
         try:
             total += website['value']
         except:
